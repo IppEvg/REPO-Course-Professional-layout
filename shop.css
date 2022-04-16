@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.top {
+    flex-grow: 1;
+}
+
+.menu {
+    height: 75px;
+    background-color: #222222;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.box_menu {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: inherit;
+}
+
+.box_left {
+    width: 110px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.logo {
+    display: block;
+}
+
+.search {}
+
+.box_right {
+    width: 160px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.burger {}
+
+.registr {}
+
+.basket {}
+
+.label {
+    height: 764px;
+    background-color: #F1E4E6;
+}
+
+.photo_box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.photo {}
+
+.logo_font {
+    display: flex;
+    justify-content: center;
+    max-height: 92px;
+    padding-right: 100px;
+}
+
+.name {
+    display: inline-block;
+    font-weight: 900 bold;
+    font-size: 48px;
+    line-height: 36.6px;
+    align-self: center;
+    padding-top: 8px;
+    padding-left: 16px;
+
+}
+
+.font_down_black {
+    font-weight: 700 bold;
+    font-size: 32px;
+    line-height: 38.4px;
+}
+
+.font_down_rose {
+    font-weight: 700 bold;
+    font-size: 32px;
+    line-height: 38.4px;
+    color: #F16D7F;
+}
+
+.content {
+    margin-top: 64px;
+}
+
+.clothes {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.woman-box {
+    margin-right: 30px;
+    position: relative;
+}
+
+.woman {
+    width: 100%;
+}
+
+.man-box {
+    margin-right: 30px;
+    position: relative;
+}
+
+.man {
+    width: 100%;
+}
+
+.kids-box {
+    position: relative;
+}
+
+.kids {
+    width: 100%;
+}
+
+.accesories-box {
+    position: relative;
+}
+
+.accesories {
+    margin-top: 30px;
+    width: 100%;
+}
+
+.change {
+    min-height: 1398px;
+    /*нужно убрать! при дальнейшей верстке - будет равен контенту, определенному кол-ву позиций с врапом */
+    margin-top: 96px;
+    border: #F16D7F solid 3px;
+    /*для обозначения области будущих позиций вещей для продаж*/
+    width: inherit;
+}
+
+.title {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*для всех блоков-ссылок на группы товаров*/
+    size: 16px;
+    line-height: 19.2px;
+    color: white;
+}
+
+.rose_words {
+    size: 24px;
+    line-height: 28.8px;
+    /*для всех блоков-ссылок на группы товаров*/
+    color: #F16D7F;
+}
+
+
+.footer {
+    background-color: #222224;
+    height: 868px;
+    position: relative;
+    margin-top: 95px;
+}
+
+.middle-footer {
+    background-image: url(Pictures/subscribe.jpg);
+    position: absolute;
+    top: 341px;
+    width: 100%;
+    height: 448px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(244, 244, 244, 0.7);
+}
+}
