@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Lato-Regular';
 }
 
 .wrapper {
@@ -19,6 +19,7 @@ body {
 
 $bg-color_grey: #222222;
 $bg-rose:#F16D7F;
+$weight-font-light: 300;
 
 
 .menu {
@@ -26,7 +27,7 @@ $bg-rose:#F16D7F;
     background-color: $bg-color_grey;
 }
 
-.container {
+.container-common {
     max-width: 1140px;
     margin: 0 auto;
 }
@@ -422,7 +423,7 @@ margin-left: 5px;
 .footer_info {
     display: inline-block;
     text-align: center;
-    font-weight: 300;
+    font-weight: $weight-font-light;
     font-size: 14px;
     line-height: 17px;
     color: #FBFBFB;
@@ -530,6 +531,10 @@ margin-left: 5px;
     line-height: 17px;
     text-align: center;
 }
+.subscribe:hover{
+    color: $bg-color_grey;
+    cursor:grab;
+}
 
 .down-footer {
     display: flex;
@@ -609,7 +614,7 @@ height: 100%;
 }
 .end_folder_300{
     text-decoration: none;
-    font-weight: 300, Bold;
+    font-weight: $weight-font-light, Bold;
     font-size: 14;
     line-height: 17px;
     color: $bg-rose;
@@ -669,7 +674,7 @@ color: $bg-rose;
 .product_name{
     font-size: 18px;
     line-height: 22px;
-    font-weight: 300, bold;
+    font-weight: $weight-font-light, bold;
     color: #4D4D4D;
     margin-top: 12px;
 }
@@ -721,7 +726,8 @@ background-color: #9F9F9F;
 }
 .arrow_summary{
     display: block;
-    
+    font-family: 'Lato';
+    color:#6F6E6E;
 }
 .arrow_summary:hover{
     color:$bg-rose ;
