@@ -634,6 +634,7 @@ body {
   opacity: 0.67;
   background-color: #E1E1E1;
   border: none;
+  font-family: sans-serif;
 }
 
 .subscribe {
@@ -647,6 +648,7 @@ body {
   font-size: 14px;
   line-height: 17px;
   text-align: center;
+  font-family: sans-serif;
 }
 
 .subscribe:hover {
@@ -1173,5 +1175,9 @@ p {
 
 a:hover {
   color: #F16D7F;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0px;
 }
 /*# sourceMappingURL=style.css.map */

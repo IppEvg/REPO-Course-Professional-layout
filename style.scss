@@ -507,6 +507,7 @@ margin-left: 5px;
     box-sizing: border-box;
 }
 
+
 .send {
     font-size: 25px;
     align-items: center;
@@ -517,6 +518,7 @@ margin-left: 5px;
     opacity: 0.67;
     background-color: #E1E1E1;
     border: none;
+    font-family: sans-serif;
 }
 
 .subscribe {
@@ -530,6 +532,7 @@ margin-left: 5px;
     font-size: 14px;
     line-height: 17px;
     text-align: center;
+    font-family: sans-serif;
 }
 .subscribe:hover{
     color: $bg-color_grey;
@@ -914,3 +917,7 @@ p{
 a:hover{
     color: $bg-rose;
 }
+ h1, h2, h3, h4, h5, h6{
+    margin-bottom: 0px;
+}
+
