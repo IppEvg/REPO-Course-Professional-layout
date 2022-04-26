@@ -1,0 +1,11 @@
+$bg-color_grey: #222222;
+$bg-rose:#F16D7F;
+$weight-font-light: 300;
+@mixin texts ($fs,$lh,$col,$fst,$fwt) {
+    font-size: $fs;
+    line-height: $lh;
+    color: $col;
+    font-family: $fst;
+    font-weight: $fwt;
+}
+    
