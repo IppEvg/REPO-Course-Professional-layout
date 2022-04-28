@@ -167,6 +167,18 @@ body {
     display: block;
 }
 
+.border-item {
+    img {
+        transition: transform 0.3s linear;
+    }
+}
+
+.border-item:hover {
+    img {
+        transform: scale(1.18);
+    }
+}
+
 .label {
     height: 764px;
     background-color: #F1E4E6;
@@ -183,6 +195,7 @@ body {
     justify-content: center;
     max-height: 92px;
     padding-right: 100px;
+    animation: anim 0.9s both;
 }
 
 .name {
@@ -226,10 +239,20 @@ body {
 
 .woman {
     width: 100%;
+    box-shadow: none;
+}
+
+.clothes-box {
+    transition: box-shadow 0.5s linear, transform 0.5s linear 0.5s;
 }
 
 .link_main {
     display: block;
+}
+
+.link_main:hover .clothes-box {
+    box-shadow: 0 0 28px 4px $bg-color_grey;
+    transform: scale(1.05);
 }
 
 .man-box {
@@ -279,7 +302,7 @@ body {
 
 .position_box {
     margin-top: 48px;
-    justify-content: space-between;
+    justify-content: space-around;
     display: flex;
     flex-wrap: wrap;
 }
@@ -353,6 +376,7 @@ body {
     align-items: center;
     padding: 8px;
     pointer-events: all;
+    transition: box-shadow 0.3s linear;
 }
 
 .add_button__link:hover {
@@ -379,6 +403,7 @@ body {
     line-height: 19.2px;
     color: white;
 }
+
 
 .rose_words {
     size: 24px;
@@ -537,11 +562,13 @@ body {
     line-height: 17px;
     text-align: center;
     font-family: sans-serif;
+    transition: color 1s linear;
 }
 
 .subscribe:hover {
     color: $bg-color_grey;
     cursor: grab;
+    border: 1px solid;
 }
 
 .down-footer {
@@ -574,10 +601,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: background-color 1s linear, transform 1s;
 }
 
 .link_messengers:hover {
     background-color: $bg-rose;
+    transform: rotate(15deg);
 }
 
 /* css for products */
@@ -653,6 +682,7 @@ body {
 .arrow_button:hover .arrow {
     background-color: rgba(49, 49, 49, 0.15);
     box-shadow: 0 0 28px rgba(65, 65, 65, 0.30);
+    animation: jello-horizontal 0.9s both 0.3s;
 }
 
 .arrow {
@@ -662,6 +692,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: background-color 0.3s linear, box-shadow 0.3s linear;
 }
 
 .product_picture {
@@ -761,6 +792,11 @@ body {
     color: #6F6E6E;
 }
 
+.arrow_summary-first {
+    min-width: 160px;
+    box-sizing: border-box;
+}
+
 .arrow_summary:hover {
     color: $bg-rose;
 }
@@ -797,6 +833,7 @@ details[open]>summary::after {
     margin-top: 49px;
     text-decoration: none;
     margin: 65px 0px;
+    transition: box-shadow 0.5s linear;
 }
 
 .add_product_to_card_button:hover {
@@ -808,6 +845,7 @@ details[open]>summary::after {
     font-size: 16px;
     line-height: 19px;
     color: $bg-rose;
+    transition: color 0.5s linear;
 }
 
 .add_product_to_card_button:hover .add_text_rose {
@@ -826,10 +864,11 @@ $width_top_menu: 1140px;
     align-items: center;
     justify-content: space-between;
     margin-top: 39px;
+
 }
 
 .top-content-catalog_box {
-    min-width: $width_top_menu/4;
+    width: $width_top_menu/3;
 
 }
 
@@ -838,7 +877,8 @@ $width_top_menu: 1140px;
     justify-content: center;
     align-items: flex-start;
     height: 18px;
-    width: max-content;
+    width: fit-content;
+
 }
 
 .big-choise-box {
@@ -864,10 +904,6 @@ $width_top_menu: 1140px;
     margin-bottom: 0;
     margin-left: 11px;
     width: fit-content;
-}
-
-.option-catalog-box {
-    min-width: 80px;
 }
 
 .mini-menu_filter {
@@ -921,7 +957,8 @@ $width_top_menu: 1140px;
     align-items: center;
     border-bottom: 1px solid #EBEBEB;
 }
-.filters_box-menu-hov{
+
+.filters_box-menu-hov {
     display: none;
 }
 
@@ -986,79 +1023,259 @@ h5,
 h6 {
     margin-bottom: 0px;
 }
+
 /* css for registration */
 .box-registration {
     display: flex;
     justify-content: space-between;
 }
+
 .data {
     display: flex;
     flex-direction: column;
-    width:360px;
+    width: 360px;
     margin: 40px 0px 31px 17px;
 }
+
 .form-section {
     font-size: 16px;
     line-height: 19px;
     color: $bg-color_grey;
     font-weight: 300;
     font-family: 'Lato-Light';
-    
+
 }
+
 .input-form {
-margin-top: 20px;
-width: 360px;
-height: 45px;
-padding: 0px 16px;
-box-sizing: border-box;
-border: 1px solid #A4A4A4;
+    margin-top: 20px;
+    width: 360px;
+    height: 45px;
+    padding: 0px 16px;
+    box-sizing: border-box;
+    border: 1px solid #A4A4A4;
 }
+
 .input-form::-webkit-input-placeholder {
-    color:#B1B1B1;
+    color: #B1B1B1;
 }
+
 .input-form-radio {
     margin: 30px 0px;
 }
-.hint{
-font-size: 11px;
-line-height: 13px;
+
+.hint {
+    font-size: 11px;
+    line-height: 13px;
 }
+
 .password-info {
     margin-top: 15px;
     color: #B1B1B1;
 }
+
 .button-form {
     margin-top: 40px;
-    color:white;
+    color: white;
     background-color: $bg-rose;
     width: 167px;
     height: 50px;
     font-size: 14px;
     line-height: 17px;
     border: 0px;
+    transition: color 0.5s linear, background-color 0.5s linear;
+
 }
+
 .button-form:hover {
-color:$bg-color_grey;
+    color: $bg-rose;
+    background-color: white;
+    border: 1px solid $bg-rose;
+
 }
+
 .percks {
     width: 652px;
     margin-left: 20px;
     margin-top: 40px;
 }
+
 .title-perks {
-    @include texts (24px,29px, #000000,'Lato-Light',300);
+    @include texts (24px, 29px, #000000, 'Lato-Light', 300);
 }
+
 .info-perks {
     margin-top: 22px;
-    @include texts (24px,29px, #000000,'Lato-Light',300);
+    @include texts (24px, 29px, #000000, 'Lato-Light', 300);
 }
+
 .list-perks {
-    list-style-position:inside;
+    list-style-position: inside;
 }
+
 .item-perks {
     margin-top: 21px;
-    @include texts (24px,29px, #000000,'Lato-Light',300);
+    @include texts (24px, 29px, #000000, 'Lato-Light', 300);
     list-style-image: url(Pictures/Item.svg);
-    
-   
+}
+
+/* css for Cart */
+
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 96px;
+}
+
+.left-main-container {
+    width: 57%;
+}
+
+.purhases-item {
+    width: 100%;
+    display: flex;
+    box-shadow: 10px 10px 10px #EAEAEA;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+
+.purchases-item-image {
+    max-width: 262px;
+    height: 306px;
+
+    img {
+        width: 100%;
+    }
+}
+
+.purchases-item-info {
+    padding: 22px 30px;
+    box-sizing: border-box;
+    max-width: 270px;
+}
+
+.purchase-escape-link {
+    position: absolute;
+    top: 5%;
+    left: unset;
+    right: 7%;
+}
+
+.purchase-escape {
+    position: absolute;
+    transition: transform 0.3s linear;
+    padding: 8px;
+}
+
+.purchase-escape:hover {
+    transform: scale(1.4);
+}
+
+.purchases-name {
+    @include texts (24px, 29px, $bg-color_grey, "Lato-regular", 400)
+}
+
+.purchases-list-attributes {
+    margin-top: 36px;
+    list-style: none;
+    @include texts (22px, 26px, #575757, "Lato-regular", 400);
+}
+
+.attribute-prise {
+    margin-top: 42px;
+}
+
+.prise-in {
+    @include texts (22px, 26px, $bg-rose, "Lato-Regular", 400);
+}
+
+.attributes {
+    margin: 6px 0px;
+}
+
+.ammount-in {
+    max-width: 43px;
+    text-align: center;
+    margin-left: 24px;
+}
+
+.purchases-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 72px;
+}
+
+.purchases-button-redact {
+    @include texts(14px, 17px, #000000, "Lato normal", 300);
+    padding: 16px 40px;
+    transition: 0.5s linear;
+}
+
+.purchases-button-redact:hover {
+    color: #E1E1E1;
+    background-color: $bg-rose;
+    box-shadow: 0 0 10px $bg-color_grey;
+}
+
+.right-main-container {
+    width: 31.5%;
+}
+
+.heading-delivery-adress-form {
+    @include texts(16px, 19px, #222222, "Lato light", 300);
+    margin-top: 10px;
+}
+
+.purchases-button-redact {
+    margin-top: 24px;
+    @include texts(11px, 13px, #4A4A4A, "Lato light", 300);
+    padding: 10px 13px;
+    background-color: white;
+    color: #A4A4A4;
+    border: 1px #A4A4A4 solid;
+}
+
+.total-prise {
+    margin-top: 57px;
+    width: 360px;
+    height: 214px;
+    background-color: #F5F3F3;
+    text-align: end;
+    padding: 40px 44px;
+    box-sizing: border-box;
+}
+
+.subtotal-prise {
+    @include texts(11px, 13px, #4A4A4A, "Lato regular", 400);
+}
+
+.grandtotal-prise {
+    margin-top: 12px;
+    @include texts(13px, 19px, #4A4A4A, "Lato light", 300);
+}
+
+.grandtotal-prise-rose {
+    @include texts(13px, 19px, $bg-rose, "Lato bold", 700);
+}
+
+.line-maxi-little {
+    width: 275px;
+    color: #E2E2E2;
+    height: 1px;
+    background-color: #E2E2E2;
+    border: none;
+    margin: 21px auto 17px;
+}
+
+.button-form-prise {
+    width: unset;
+    padding: 15px 40px;
+    margin: 17px auto 0px;
+    @include texts(16px, 19px, white, "Lato light", 300);
+    border: 1px $bg-rose solid;
+}
+
+.button-form-prise:hover {
+    width: unset;
 }
