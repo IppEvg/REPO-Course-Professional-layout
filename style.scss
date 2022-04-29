@@ -302,6 +302,7 @@ body {
 
 .position_box {
     margin-top: 48px;
+    margin-bottom: 128px;
     justify-content: space-around;
     display: flex;
     flex-wrap: wrap;
@@ -330,6 +331,14 @@ body {
     display: flex;
     pointer-events: none;
 }
+
+.button-container-common {
+    display: flex;
+    justify-content: center;
+    margin: none;
+}
+
+.add_product_to_card_button-index {}
 
 .link_position {
     text-decoration: none;
@@ -713,6 +722,8 @@ body {
     justify-content: center;
     display: flex;
     flex-direction: column;
+    padding-bottom: 64px;
+    box-sizing: border-box;
 }
 
 .line-mini {
@@ -754,6 +765,7 @@ body {
     align-items: flex-start;
     height: 18px;
     margin-top: 65px;
+    margin-bottom: 48px;
 
 }
 
@@ -824,37 +836,50 @@ details[open]>summary::after {
 }
 
 .add_product_to_card_button {
-    width: 211px;
-    height: 47px;
     display: flex;
+    padding: 14px 38px;
     justify-content: center;
     align-items: center;
     border: 1px solid $bg-rose;
-    margin-top: 49px;
+
     text-decoration: none;
-    margin: 65px 0px;
     transition: box-shadow 0.5s linear;
 }
 
 .add_product_to_card_button:hover {
-    box-shadow: 0 0 10px #4D4D4D;
+    background-color: $bg-rose;
+    box-shadow: 0 0 10px $bg-rose;
+}
+
+.add_picture_rose {
+    margin-right: 23px;
+    transition: all 0.5s linear;
 }
 
 .add_text_rose {
-    margin-left: 23px;
     font-size: 16px;
     line-height: 19px;
     color: $bg-rose;
     transition: color 0.5s linear;
 }
 
-.add_product_to_card_button:hover .add_text_rose {
-    color: #4D4D4D;
+.add_picture_white {
+    display: none;
+    margin-right: 23px;
 }
 
-.position_box {
-    margin-bottom: 128px;
+.add_product_to_card_button:hover .add_picture_rose {
+    display: none;
 }
+
+.add_product_to_card_button:hover .add_picture_white {
+    display: block;
+}
+
+.add_product_to_card_button:hover .add_text_rose {
+    color: white;
+}
+
 
 /* css for catalog */
 $width_top_menu: 1140px;
@@ -956,13 +981,18 @@ $width_top_menu: 1140px;
 .filters_box-menu {
     align-items: center;
     border-bottom: 1px solid #EBEBEB;
+    margin-top: 18px;
 }
 
 .filters_box-menu-hov {
     display: none;
 }
 
-.filters_mega_item_section:hover .filters_box-menu-hov {
+.filters_mega_item_section:active .filters_box-menu-hov {
+    display: block;
+}
+
+.filters_box-menu-hov:hover {
     display: block;
 }
 

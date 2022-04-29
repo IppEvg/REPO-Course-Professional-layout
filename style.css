@@ -527,6 +527,7 @@ body {
 
 .position_box {
   margin-top: 48px;
+  margin-bottom: 128px;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   display: -webkit-box;
@@ -562,6 +563,16 @@ body {
   display: -ms-flexbox;
   display: flex;
   pointer-events: none;
+}
+
+.button-container-common {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: none;
 }
 
 .link_position {
@@ -1061,6 +1072,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding-bottom: 64px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .line-mini {
@@ -1108,6 +1122,7 @@ body {
           align-items: flex-start;
   height: 18px;
   margin-top: 65px;
+  margin-bottom: 48px;
 }
 
 .option {
@@ -1183,11 +1198,10 @@ details[open] > summary::after {
 }
 
 .add_product_to_card_button {
-  width: 211px;
-  height: 47px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 14px 38px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1195,9 +1209,7 @@ details[open] > summary::after {
       -ms-flex-align: center;
           align-items: center;
   border: 1px solid #F16D7F;
-  margin-top: 49px;
   text-decoration: none;
-  margin: 65px 0px;
   -webkit-transition: -webkit-box-shadow 0.5s linear;
   transition: -webkit-box-shadow 0.5s linear;
   transition: box-shadow 0.5s linear;
@@ -1205,12 +1217,18 @@ details[open] > summary::after {
 }
 
 .add_product_to_card_button:hover {
-  -webkit-box-shadow: 0 0 10px #4D4D4D;
-          box-shadow: 0 0 10px #4D4D4D;
+  background-color: #F16D7F;
+  -webkit-box-shadow: 0 0 10px #F16D7F;
+          box-shadow: 0 0 10px #F16D7F;
+}
+
+.add_picture_rose {
+  margin-right: 23px;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
 }
 
 .add_text_rose {
-  margin-left: 23px;
   font-size: 16px;
   line-height: 19px;
   color: #F16D7F;
@@ -1218,12 +1236,21 @@ details[open] > summary::after {
   transition: color 0.5s linear;
 }
 
-.add_product_to_card_button:hover .add_text_rose {
-  color: #4D4D4D;
+.add_picture_white {
+  display: none;
+  margin-right: 23px;
 }
 
-.position_box {
-  margin-bottom: 128px;
+.add_product_to_card_button:hover .add_picture_rose {
+  display: none;
+}
+
+.add_product_to_card_button:hover .add_picture_white {
+  display: block;
+}
+
+.add_product_to_card_button:hover .add_text_rose {
+  color: white;
 }
 
 /* css for catalog */
@@ -1346,13 +1373,18 @@ details[open] > summary::after {
       -ms-flex-align: center;
           align-items: center;
   border-bottom: 1px solid #EBEBEB;
+  margin-top: 18px;
 }
 
 .filters_box-menu-hov {
   display: none;
 }
 
-.filters_mega_item_section:hover .filters_box-menu-hov {
+.filters_mega_item_section:active .filters_box-menu-hov {
+  display: block;
+}
+
+.filters_box-menu-hov:hover {
   display: block;
 }
 
