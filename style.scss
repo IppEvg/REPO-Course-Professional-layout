@@ -91,6 +91,7 @@ body {
 .burger_menu {
     position: absolute;
     top: 40px;
+    right: -125px;
     background-color: white;
     display: none;
     z-index: 1;
@@ -106,6 +107,7 @@ body {
     align-items: flex-start;
     margin: 37px 75px 37px 34px;
     position: relative;
+
 }
 
 .mega_item_section {
@@ -311,7 +313,7 @@ body {
 .position {
     background-color: #F8F8F8;
     position: relative;
-    width: 360px;
+    width: 31%;
     margin-bottom: 30px;
 }
 
@@ -338,7 +340,6 @@ body {
     margin: none;
 }
 
-.add_product_to_card_button-index {}
 
 .link_position {
     text-decoration: none;
@@ -411,6 +412,7 @@ body {
     size: 16px;
     line-height: 19.2px;
     color: white;
+    width: fit-content;
 }
 
 
@@ -968,6 +970,7 @@ $width_top_menu: 1140px;
 
 .filters_burger_menu {
     margin-top: 0px;
+    left: 0px;
 }
 
 .filters_mega_item {
@@ -1308,4 +1311,265 @@ h6 {
 
 .button-form-prise:hover {
     width: unset;
+}
+
+@media (max-width:1023px) {
+
+    // media 1024px from index
+    .box {
+        margin: auto 32px;
+    }
+
+    .burger_menu {
+        right: -157px;
+    }
+
+    .label {
+        height: 368px;
+    }
+
+    .photo_box {
+        height: 100%;
+        justify-content: space-around;
+    }
+
+    .photo {
+        height: 100%;
+    }
+
+    .font_down_black {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .font_down_rose {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .logo_font {
+        padding-right: 5%;
+    }
+
+    .content {
+        margin: 0px;
+    }
+
+    .woman-box,
+    .accesories-box,
+    .man-box,
+    .kids-box {
+        margin: 16px;
+    }
+
+    .accesories {
+        margin-top: 0px;
+    }
+
+    .position {
+        width: 48%;
+        margin-bottom: 16px;
+    }
+
+    .position_box {
+        margin-bottom: 33px;
+    }
+
+    .footer {
+        height: unset;
+    }
+
+    .top_footer {
+        flex-direction: column;
+        height: 610px;
+        justify-content: space-around;
+        padding: 50px 0px;
+    }
+
+    .top_footer__box {
+        height: 28%;
+        justify-content: space-around;
+    }
+
+    .middle_footer {
+        height: unset;
+        background-size: cover;
+    }
+
+    .middle_footer__wrapper {
+        flex-direction: column;
+    }
+
+    .massage {
+        margin: 50px 0px;
+    }
+
+    .forms {
+        margin-bottom: 140px;
+    }
+
+    // for product
+    .bread_crumbs {
+        margin: auto 32px;
+    }
+
+    .product_picture {
+        max-width: 466px;
+        max-height: 624px;
+    }
+
+    .top-content_product {
+        height: auto;
+    }
+
+    .position:last-child {
+        display: none;
+    }
+
+    //for catalog
+    .top-content-catalog {
+        margin: 24px 32px 0px;
+    }
+
+    .change-catalog {
+        margin-top: 40px;
+    }
+
+    .top-content-catalog_box:last-child {
+        display: none;
+    }
+
+    .filters_burger_menu {
+        left: 0px
+    }
+
+    //for registration
+    .perks {
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    .item-perks,
+    .info-perks,
+    .title-perks {
+        font-size: 16px;
+        line-height: 19px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .registr,
+    .basket {
+        display: none;
+    }
+
+    .box_right {
+        justify-content: end;
+    }
+
+    .burger_menu {
+        right: -30px;
+    }
+
+    .photo {
+        display: none;
+    }
+
+    .logo_font {
+        padding-right: 0px;
+    }
+
+    .content {
+        margin-top: 64px;
+    }
+
+    .clothes {
+        flex-direction: column;
+    }
+
+    .accesories {
+        min-height: 100px;
+    }
+
+    .woman-box,
+    .accesories-box,
+    .man-box,
+    .kids-box {
+        margin: 0px 16px 16px 16px;
+    }
+
+    .change {
+        margin-top: 64px;
+    }
+
+    .position {
+        width: 95%;
+    }
+
+    .down-footer {
+        height: 143px;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        flex-grow: unset;
+    }
+
+    .messangers {
+        margin-top: 43px;
+    }
+
+    .copyright {
+        flex-grow: unset;
+        margin-bottom: 9px;
+    }
+
+    //for product
+    .line-maxi {
+        width: 50%;
+    }
+
+    .bread_crumbs {
+        flex-direction: column;
+    }
+
+    .bread_crumds__left {
+        margin-top: 24px;
+    }
+
+    .bread_crumds__right {
+        margin-bottom: 45px;
+    }
+
+    .arrow_summary {
+        font-size: 10px;
+        line-height: 12px;
+    }
+
+    //for catalog
+    .filters-text {
+        display: none;
+    }
+
+    .filters-img,
+    .filters-img-rose {
+        width: 38px;
+    }
+
+    .arrow_summary-first {
+        min-width: 105px;
+    }
+
+    .option_name {
+        font-size: 11px;
+    }
+
+    //for registration
+    .box-registration {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .percks {
+        width: auto;
+    }
 }
