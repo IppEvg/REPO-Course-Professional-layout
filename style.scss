@@ -425,7 +425,6 @@ body {
 
 .footer {
     background-color: $bg-color_grey;
-    height: 868px;
     margin-top: 65px;
     display: flex;
     flex-direction: column;
@@ -1081,7 +1080,7 @@ h6 {
 
 .input-form {
     margin-top: 20px;
-    width: 360px;
+    width: 100%;
     height: 45px;
     padding: 0px 16px;
     box-sizing: border-box;
@@ -1252,7 +1251,8 @@ h6 {
 }
 
 .right-main-container {
-    width: 31.5%;
+    max-width: 360px;
+    margin-right: 10px;
 }
 
 .heading-delivery-adress-form {
@@ -1271,7 +1271,7 @@ h6 {
 
 .total-prise {
     margin-top: 57px;
-    width: 360px;
+    max-width: 360px;
     height: 214px;
     background-color: #F5F3F3;
     text-align: end;
@@ -1413,6 +1413,10 @@ h6 {
         margin: auto 32px;
     }
 
+    .content-product {
+        margin-bottom: 0px;
+    }
+
     .product_picture {
         max-width: 466px;
         max-height: 624px;
@@ -1422,7 +1426,7 @@ h6 {
         height: auto;
     }
 
-    .position:last-child {
+    .position-last {
         display: none;
     }
 
@@ -1455,6 +1459,49 @@ h6 {
         font-size: 16px;
         line-height: 19px;
     }
+
+    //for cart
+    .main-container {
+        margin-top: 59px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-main-container {
+        width: 96%;
+    }
+
+    .purchases-buttons {
+        margin-top: 62px;
+        justify-content: center;
+    }
+
+    .clear {
+        margin-right: 6%;
+    }
+
+    .right-main-container {
+        max-width: 96%;
+        margin-right: 0px;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 64px;
+    }
+
+    .delivery-adress {
+        width: 48%;
+        max-width: 360px;
+    }
+
+    .total-prise {
+        margin-top: 48px;
+        width: 48%;
+    }
+
+    .button-form-prise {
+        min-width: max-content;
+    }
+
 }
 
 @media (max-width: 767px) {
@@ -1572,4 +1619,58 @@ h6 {
     .percks {
         width: auto;
     }
+
+    // for cart
+    .main-container {
+        margin-top: 39px;
+    }
+
+    .bread_crumds__left_mod {
+        margin: auto;
+    }
+
+    .purhases-item {
+        margin-bottom: 32px;
+    }
+
+    .purchases-name {
+        font-size: 16px;
+        line-height: 19px;
+        max-width: 140px;
+    }
+
+    .purchases-item-image {
+        max-width: 35%;
+        height: auto;
+    }
+
+    .product-link-img {
+        height: 100%;
+    }
+
+    .purchases-list-attributes,
+    .prise-in {
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    .right-main-container {
+        margin-top: 48px;
+        flex-direction: column;
+    }
+
+    .right-main-container {
+        align-items: center;
+    }
+
+    .delivery-adress {
+        width: 96%;
+        max-width: none;
+    }
+
+    .total-prise {
+        max-width: none;
+        width: 96%;
+    }
+
 }
