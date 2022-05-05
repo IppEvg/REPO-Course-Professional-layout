@@ -1640,12 +1640,14 @@ h6 {
     }
 
     .purchases-item-image {
-        max-width: 35%;
-        height: auto;
+        max-width: 46%;
+        height: inherit;
+        min-width: 143px;
+        align-self: center;
     }
 
     .product-link-img {
-        height: 100%;
+        height: fit-content;
     }
 
     .purchases-list-attributes,
@@ -1653,7 +1655,9 @@ h6 {
         font-size: 14px;
         line-height: 17px;
     }
-
+    .purchases-list-attributes{
+        margin-top: 20px;
+    }
     .right-main-container {
         margin-top: 48px;
         flex-direction: column;
@@ -1672,5 +1676,11 @@ h6 {
         max-width: none;
         width: 96%;
     }
-
+    .button-form{
+        height: fit-content;
+    }
+    .button-form-prise{
+        max-width: fit-content;
+        min-width: 75%;
+    }
 }
