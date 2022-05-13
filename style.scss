@@ -475,7 +475,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-color: rgba(244, 244, 244, 0.7);
-
+    background-size: cover;
 }
 
 .middle_footer__wrapper {
@@ -990,7 +990,7 @@ $width_top_menu: 1140px;
     display: none;
 }
 
-.filters_mega_item_section:active .filters_box-menu-hov {
+.filters_mega_item_section:hover .filters_box-menu-hov {
     display: block;
 }
 
@@ -1655,9 +1655,11 @@ h6 {
         font-size: 14px;
         line-height: 17px;
     }
-    .purchases-list-attributes{
+
+    .purchases-list-attributes {
         margin-top: 20px;
     }
+
     .right-main-container {
         margin-top: 48px;
         flex-direction: column;
@@ -1676,10 +1678,12 @@ h6 {
         max-width: none;
         width: 96%;
     }
-    .button-form{
+
+    .button-form {
         height: fit-content;
     }
-    .button-form-prise{
+
+    .button-form-prise {
         max-width: fit-content;
         min-width: 75%;
     }

@@ -741,6 +741,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-color: rgba(244, 244, 244, 0.7);
+  background-size: cover;
 }
 
 .middle_footer__wrapper {
@@ -1384,7 +1385,7 @@ details[open] > summary::after {
   display: none;
 }
 
-.filters_mega_item_section:active .filters_box-menu-hov {
+.filters_mega_item_section:hover .filters_box-menu-hov {
   display: block;
 }
 
