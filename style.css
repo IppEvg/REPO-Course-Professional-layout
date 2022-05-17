@@ -609,7 +609,7 @@ body {
   width: 100%;
   display: none;
   position: absolute;
-  top: 90px;
+  top: 33%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -862,15 +862,14 @@ body {
   line-height: 17px;
   text-align: center;
   font-family: sans-serif;
-  -webkit-transition: color 1s linear;
-  transition: color 1s linear;
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
 }
 
 .subscribe:hover {
-  color: #222222;
-  cursor: -webkit-grab;
-  cursor: grab;
-  border: 1px solid;
+  color: #F16D7F;
+  background-color: white;
+  border: 1px solid #F16D7F;
 }
 
 .down-footer {
@@ -1682,6 +1681,10 @@ h6 {
   margin-top: 72px;
 }
 
+.purcase-adress {
+  margin-top: 24px;
+}
+
 .purchases-button-redact {
   font-size: 14px;
   line-height: 17px;
@@ -1691,13 +1694,20 @@ h6 {
   padding: 16px 40px;
   -webkit-transition: 0.5s linear;
   transition: 0.5s linear;
+  background-color: white;
+  color: #000000;
+  border: 1px #A4A4A4 solid;
 }
 
 .purchases-button-redact:hover {
-  color: #E1E1E1;
   background-color: #F16D7F;
-  -webkit-box-shadow: 0 0 10px #222222;
-          box-shadow: 0 0 10px #222222;
+  -webkit-box-shadow: 0 0 10px #f16d7f;
+          box-shadow: 0 0 10px #f16d7f;
+  color: #E1E1E1;
+}
+
+.box_button_into {
+  max-height: 40px;
 }
 
 .right-main-container {
@@ -1712,19 +1722,6 @@ h6 {
   font-family: "Lato light";
   font-weight: 300;
   margin-top: 10px;
-}
-
-.purchases-button-redact {
-  margin-top: 24px;
-  font-size: 11px;
-  line-height: 13px;
-  color: #4A4A4A;
-  font-family: "Lato light";
-  font-weight: 300;
-  padding: 10px 13px;
-  background-color: white;
-  color: #A4A4A4;
-  border: 1px #A4A4A4 solid;
 }
 
 .total-prise {
