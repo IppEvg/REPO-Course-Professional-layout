@@ -934,6 +934,7 @@ $width_top_menu: 1140px;
 .mini-menu_filter {
     display: flex;
     align-items: center;
+
 }
 
 .mini-menu_filter:hover {
@@ -970,6 +971,8 @@ $width_top_menu: 1140px;
 .filters_burger_menu {
     margin-top: 0px;
     left: 0px;
+    width: fit-content;
+    height: 500px;
 }
 
 .filters_mega_item {

@@ -1362,6 +1362,10 @@ details[open] > summary::after {
 .filters_burger_menu {
   margin-top: 0px;
   left: 0px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 500px;
 }
 
 .filters_mega_item {
