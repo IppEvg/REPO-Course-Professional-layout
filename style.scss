@@ -420,7 +420,7 @@ body {
     width: 100%;
     display: none;
     position: absolute;
-    top: 90px;
+    top: 33%;
     justify-content: center;
     align-items: center;
 }
@@ -522,7 +522,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-color: rgba(244, 244, 244, 0.7);
-
+    background-size: cover;
 }
 
 .middle_footer__wrapper {
@@ -619,13 +619,13 @@ body {
     line-height: 17px;
     text-align: center;
     font-family: sans-serif;
-    transition: color 1s linear;
+    transition: all 1s linear;
 }
 
 .subscribe:hover {
-    color: $bg-color_grey;
-    cursor: grab;
-    border: 1px solid;
+    color: $bg-rose;
+    background-color: white;
+    border: 1px solid $bg-rose;
 }
 
 .down-footer {
@@ -916,7 +916,6 @@ details[open]>summary::after {
     justify-content: center;
     align-items: center;
     border: 1px solid $bg-rose;
-
     text-decoration: none;
     transition: box-shadow 0.5s linear;
 }
@@ -1009,6 +1008,7 @@ $width_top_menu: 1140px;
 .mini-menu_filter {
     display: flex;
     align-items: center;
+
 }
 
 .mini-menu_filter:hover {
@@ -1028,6 +1028,7 @@ $width_top_menu: 1140px;
     display: block;
 }
 
+
 .filters-text {
     margin-top: 0;
     margin-bottom: 0;
@@ -1044,6 +1045,8 @@ $width_top_menu: 1140px;
 .filters_burger_menu {
     margin-top: 0px;
     left: 0px;
+    width: fit-content;
+    height: 500px;
 }
 
 .filters_mega_item {
@@ -1064,7 +1067,7 @@ $width_top_menu: 1140px;
     display: none;
 }
 
-.filters_mega_item_section:active .filters_box-menu-hov {
+.filters_mega_item_section:hover .filters_box-menu-hov {
     display: block;
 }
 
@@ -1196,7 +1199,6 @@ h6 {
     color: $bg-rose;
     background-color: white;
     border: 1px solid $bg-rose;
-
 }
 
 .percks {
@@ -1312,16 +1314,27 @@ h6 {
     margin-top: 72px;
 }
 
+.purcase-adress {
+    margin-top: 24px;
+}
+
 .purchases-button-redact {
     @include texts(14px, 17px, #000000, "Lato normal", 300);
     padding: 16px 40px;
     transition: 0.5s linear;
+    background-color: white;
+    color: #000000;
+    border: 1px #A4A4A4 solid;
 }
 
 .purchases-button-redact:hover {
+    background-color: #F16D7F;
+    box-shadow: 0 0 10px #f16d7f;
     color: #E1E1E1;
-    background-color: $bg-rose;
-    box-shadow: 0 0 10px $bg-color_grey;
+}
+
+.box_button_into {
+    max-height: 40px;
 }
 
 .right-main-container {
@@ -1334,14 +1347,7 @@ h6 {
     margin-top: 10px;
 }
 
-.purchases-button-redact {
-    margin-top: 24px;
-    @include texts(11px, 13px, #4A4A4A, "Lato light", 300);
-    padding: 10px 13px;
-    background-color: white;
-    color: #A4A4A4;
-    border: 1px #A4A4A4 solid;
-}
+.purchases-button-redact {}
 
 .total-prise {
     margin-top: 57px;
@@ -1520,6 +1526,7 @@ h6 {
     .filters_burger_menu {
         left: 0px
     }
+
 
     //for registration
     .perks {
@@ -1714,18 +1721,24 @@ h6 {
     }
 
     .purchases-item-image {
-        max-width: 35%;
-        height: auto;
+        max-width: 46%;
+        height: inherit;
+        min-width: 143px;
+        align-self: center;
     }
 
     .product-link-img {
-        height: 100%;
+        height: fit-content;
     }
 
     .purchases-list-attributes,
     .prise-in {
         font-size: 14px;
         line-height: 17px;
+    }
+
+    .purchases-list-attributes {
+        margin-top: 20px;
     }
 
     .right-main-container {
@@ -1747,4 +1760,12 @@ h6 {
         width: 96%;
     }
 
+    .button-form {
+        height: fit-content;
+    }
+
+    .button-form-prise {
+        max-width: fit-content;
+        min-width: 75%;
+    }
 }
