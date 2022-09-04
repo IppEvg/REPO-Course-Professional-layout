@@ -1,0 +1,18 @@
+{
+    "amount": 41000,
+    "countGoods": 2,
+    "contents": [
+        {
+            "id_product": 124,
+            "product_name": "Клавиатура",
+            "price": 3000,
+            "quantity": 1
+        },
+        {
+            "id_product": 455,
+            "product_name": "Компьютер",
+            "price": 38000,
+            "quantity": 1
+        }
+    ]
+}

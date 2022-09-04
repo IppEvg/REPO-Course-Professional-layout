@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+</head>
+
+<body>
+    <div id="app">
+        <error v-if="error"></error>
+        <header v-if="!error">
+            <nav class="container">
+                <a class="logo" href="index.html">
+                    <img src="Pictures/Logo.svg" alt="logo">
+                </a>
+                <sort></sort>
+                <button class="cart-button " type="button" @mouseover="show = !show" @mouseout="show = !show">Корзина</button>
+                <basket :img="imgCatalog" :products="goodsOfBasket" @delete="delProduct" :visibility="$root.show">
+                </basket>
+            </nav>
+        </header>
+        <main v-if="!error">
+
+            <products :products="filtered" :img="imgCatalog" @add-product="addProduct"></products>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8"></script>
+    <script src="ErrorComponent.js"></script>
+    <script src="FilterComponent.js"></script>
+    <script src="CardComponent.js"></script>
+    <script src="BasketComponent.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

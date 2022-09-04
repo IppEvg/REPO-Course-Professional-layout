@@ -43,7 +43,7 @@ body {
 }
 
 .box_left {
-    width: 110px;
+    width: 150px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -59,20 +59,21 @@ body {
     padding-right: 10px;
 }
 
-.search:hover .search_place {
-    display: inherit;
-}
 
-.search_place {
+
+.search_form {
     max-width: 180px;
     height: 28px;
     display: none;
     position: absolute;
     left: 33px;
 }
-
-.search_place__input {
+.search:hover .search_form {
+    display: block;
+}
+.search-field {
     background-color: #FBFBFB;
+    height: 22px;
 }
 
 .box_right {
@@ -84,6 +85,9 @@ body {
 
 .mini-menu {
     position: relative;
+    padding: 15px 0px;
+}
+.mini-menu-basket{
     padding: 15px 0px;
 }
 
@@ -105,13 +109,14 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin: 37px 75px 37px 34px;
+    margin: 20px;
     position: relative;
 
 }
 
 .mega_item_section {
     margin-top: 22px;
+    position: relative;
 }
 
 .escape {
@@ -156,17 +161,58 @@ body {
 }
 
 .basket_menu {
-    display: none;
     position: absolute;
-    top: 50px;
-    background-color: white;
+    top: 75px;
+    background-color:#d9d2d3;
+    right: 0;
+    max-width: 300px;
     z-index: 1;
+    
+}
+.pictures{
+    max-width: 75%;
+    margin: 2%;
+    height: 100px;
+    flex-grow: 1;
+    max-height: 15%;
 }
 
-.last:hover .basket_menu {
-    right: 0;
-    left: auto;
-    display: block;
+.del{
+    position: absolute;
+    right: 2%;
+    top: 2%;
+    background-color: rgb(58, 52, 52);
+    color: rgb(219, 193, 193);
+    width: 11%;
+    height: 11%;
+    max-width: 50px;
+    max-height: 50px;
+    text-align: center;
+    border: none;
+    pointer-events: auto;
+}
+
+.del:hover {
+    transform: skew(5deg, -5deg);
+}
+
+.summ{
+    color:$bg-rose ;
+}
+.parth-basket{
+    background-color:white ;
+    text-align: center;
+    margin: 15px auto 0px;
+    width: 50%;
+    height: 30px;
+    color: $bg-rose;
+    border: 1px solid $bg-rose;
+    transition: 800ms;
+}
+:hover.parth-basket {
+    background-color:$bg-rose ;
+    color: white;
+
 }
 
 .border-item {
@@ -387,6 +433,7 @@ body {
     padding: 8px;
     pointer-events: all;
     transition: box-shadow 0.3s linear;
+    background-color: #e1e1e127;
 }
 
 .add_button__link:hover {
@@ -617,6 +664,33 @@ body {
 .link_messengers:hover {
     background-color: $bg-rose;
     transform: rotate(15deg);
+}
+
+.button_buy {
+    display: block;
+    margin: 0 auto 5px;
+    padding: 0px 5%;
+    width: 45%;
+    height: 30px;
+    border-radius: 5px;
+    background-color: rgb(55, 36, 70);
+    color: rgb(255, 208, 208);
+    border: 1px solid rgb(255, 208, 208);
+    transition: 500ms;
+}
+
+.button_buy:hover {
+    border: 1px solid rgb(55, 36, 70);
+    background-color: rgb(255, 208, 208);
+    color: rgb(55, 36, 70);
+    transform: scale3d(1.05, 1.01, 1.02);
+}
+
+.alarm {
+    color: rgb(61, 13, 151);
+    size: 30px;
+    text-align: center;
+    margin: 20vh;
 }
 
 /* css for products */
