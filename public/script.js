@@ -36,7 +36,7 @@ const app = new Vue({
             })
                 .then(result => result.json())
                 .catch(error => {
-                    console.log('error');
+                    console.log('');
                     this.error = true;
                 })
         },
@@ -104,6 +104,7 @@ const app = new Vue({
         this.getJson(`/api/products`)
             .then(data => {
                 for (let el of data) {
+                    el.imgPath = `Pictures/${el.id_product}.jpg`;
                     this.goods.push(el);
                     this.filtered.push(el);
                 }

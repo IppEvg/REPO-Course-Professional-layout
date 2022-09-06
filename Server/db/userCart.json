@@ -1,0 +1,16 @@
+{
+    "contents": [
+        {
+            "id_product": 1,
+            "product_name": "Куртка синяя",
+            "price": 5400,
+            "imgPath": "public/Pictures/Picture1.jpg"
+        },
+        {
+            "id_product": 2,
+            "product_name": "Платье-костюм черный",
+            "price": 5200,
+            "imgPath": "public/Pictures/Picture2.jpg"
+        }
+    ]
+}
