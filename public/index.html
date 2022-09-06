@@ -63,11 +63,12 @@
                             <a class="registr mini-menu border-item" href="Registration.html"> <img
                                     src="Pictures/User.svg" alt="user"></a>
                             <div class="basket mini-menu-basket  border-item" @click="show = !show">
-                                <img src="Pictures/Basket.svg" alt="basket" > 
-                            </div> 
-                            <basket :img="imgCatalog" :products="goodsOfBasket" @delete="delProduct" :visibility="$root.show">
+                                <img src="Pictures/Basket.svg" alt="basket">
+                            </div>
+                            <basket :img="imgCatalog" :products="goodsOfBasket" @delete="delProduct"
+                                :visibility="$root.show">
                             </basket>
-                                
+
                         </div>
                     </div>
                 </nav>

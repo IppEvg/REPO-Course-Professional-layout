@@ -7,7 +7,7 @@ Vue.component('basket', {
         <p class="summ" > товаров на сумму: {{$root.getSumm}} руб.</p>
         <basketproduct v-for="item of products" :img="img" :item="item" >
         </basketproduct>
-        <button class='parth-basket'>Заказать</button> 
+        <a href='Cart.html' class='parth-basket'><p class='add_text_rose-basket'>Заказать</p></a> 
         </div>
     </div>
     `

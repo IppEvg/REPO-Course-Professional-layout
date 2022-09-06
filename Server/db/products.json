@@ -1,0 +1,38 @@
+[
+    {
+        "id_product": 1,
+        "product_name": "Куртка синяя",
+        "price": 5400,
+        "img_patch": "public/Pictures/Picture1.jpg"
+    },
+    {
+        "id_product": 2,
+        "product_name": "Платье-костюм черный",
+        "price": 5200,
+        "img_patch": "public/Pictures/Picture2.jpg"
+    },
+    {
+        "id_product": 3,
+        "product_name": "Худи черно-синее",
+        "price": 3800,
+        "img_patch": "public/Pictures/Picture3.jpg"
+    },
+    {
+        "id_product": 4,
+        "product_name": "Футболка принт",
+        "price": 1400,
+        "img_patch": "public/Pictures/Picture4.jpg"
+    },
+    {
+        "id_product": 5,
+        "product_name": "Пиджак голубой",
+        "price": 4100,
+        "img_patch": "public/Pictures/Picture5.jpg"
+    },
+    {
+        "id_product": 6,
+        "product_name": "Рубашка полосатая",
+        "price": 1800,
+        "img_patch": "public/Pictures/Picture6.jpg"
+    }
+]

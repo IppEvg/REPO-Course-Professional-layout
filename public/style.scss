@@ -43,7 +43,7 @@ body {
 }
 
 .box_left {
-    width: 150px;
+    width: 300px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -115,8 +115,11 @@ body {
 }
 
 .mega_item_section {
-    margin-top: 22px;
+    margin-top: 10px;
     position: relative;
+    width: 100%;
+    border: 1px solid rgba(128, 128, 128, 0.589);
+    padding: 1px;
 }
 
 .escape {
@@ -131,7 +134,9 @@ body {
     color: $bg-color_grey;
     width: max-content;
 }
-
+.mega_item > .title_menu{
+    align-self: center;
+}
 .title_section {
     text-decoration: none;
     font-size: 14px;
@@ -170,11 +175,11 @@ body {
     
 }
 .pictures{
-    max-width: 75%;
+    max-width: 55%;
     margin: 2%;
-    height: 100px;
+    height: 90px;
     flex-grow: 1;
-    max-height: 15%;
+    max-height: 100px;
 }
 
 .del{
@@ -208,11 +213,16 @@ body {
     color: $bg-rose;
     border: 1px solid $bg-rose;
     transition: 800ms;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: box-shadow 0.5s linear;
 }
 :hover.parth-basket {
     background-color:$bg-rose ;
     color: white;
-
+    box-shadow: 0 0 10px #f16d7f;
 }
 
 .border-item {
@@ -953,6 +963,14 @@ details[open]>summary::after {
 
 .add_product_to_card_button:hover .add_text_rose {
     color: white;
+}
+.add_text_rose-basket{
+    color: $bg-rose;
+    transition: 800ms;
+}
+.parth-basket:hover .add_text_rose-basket{
+    color: white;
+    
 }
 
 
