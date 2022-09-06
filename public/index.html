@@ -65,7 +65,7 @@
                             <div class="basket mini-menu-basket  border-item" @click="show = !show">
                                 <img src="Pictures/Basket.svg" alt="basket">
                             </div>
-                            <basket :img="imgCatalog" :products="goodsOfBasket" @delete="delProduct"
+                            <basket  :products="goodsOfBasket" @delete="delProduct"
                                 :visibility="$root.show">
                             </basket>
 
@@ -130,7 +130,7 @@
                 <div class="change_box container-common">
                     <h2 class="change_box__title">Fetured Items</h2>
                     <p class="change_box__info">Shop for items based on what we featured in this week</p>
-                    <products :products="filtered" :img="imgCatalog" @add-product="addProduct"></products>
+                    <products :products="filtered"  @add-product="addProduct"></products>
                     <div class="container-common button-container-common">
                         <a class="add_product_to_card_button add_product_to_card_button-index" href="#">
                             <p class="add_text_rose">Browse All Product</p>

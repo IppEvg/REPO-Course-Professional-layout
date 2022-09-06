@@ -3,11 +3,11 @@ const API = 'https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-a
 const app = new Vue({
     el: '#app',
     data: {
-        catalogUrl: 'catalogData.json',
-        cartUrl: 'getBasket.json',
+        catalogUrl: 'db/products.json',
+        cartUrl: 'db/userCart.json',
         goods: [],
         filtered: [],
-        imgCatalog: `pictures/Ноутбук.jpg`,
+        imgCatalog:'',
         userSearch: '',
         show: false,
         goodsOfBasket: [],
@@ -26,7 +26,7 @@ const app = new Vue({
                     this.error = true;
                 })
         },
-        putJson(url) {
+        putJson(url,data) {
             return fetch(url, {
                 method: "PUT",
                 headers: {
@@ -58,18 +58,19 @@ const app = new Vue({
         addProduct(item) {
             let find = this.goodsOfBasket.find(el => item.id_product === el.id_product);
             if (find) {
-                this.putJson('/api/cart/${find.id_product}', { quantity: 1 })
+                this.putJson(`/api/cart/${find.id_product}`, { quantity: 1 })
                     .then(data => {
                         if (data.result === 1) {
                             find.quantity++;
-                        } else {
-                            const prod = Object.assign({ quantity: 1 }, item);
-                            this.postJson('/api/cart', prod)
-                                .then(data => {
-                                    if (data.result === 1) {
-                                        this.goodsOfBasket.push(prod);
-                                    }
-                                })
+                        } 
+                    })
+            } else {
+                const prod = Object.assign({ quantity: 1 }, item);
+                item.imgPath = `Pictures/${item.id_product}.jpg`;
+                this.postJson('/api/cart', prod)
+                    .then(data => {
+                        if (data.result === 1) {
+                            this.goodsOfBasket.push(prod);
                         }
                     })
             }
@@ -104,7 +105,7 @@ const app = new Vue({
         this.getJson(`/api/products`)
             .then(data => {
                 for (let el of data) {
-                    el.imgPath = `Pictures/${el.id_product}.jpg`;
+                    el.imgPath=`Pictures/${el.id_product}.jpg` ;
                     this.goods.push(el);
                     this.filtered.push(el);
                 }
@@ -112,6 +113,7 @@ const app = new Vue({
         this.getJson(`/api/cart`)
             .then(data => {
                 for (let el of data.contents) {
+                    el.imgPath = `Pictures/${el.id_product}.jpg`;
                     this.goodsOfBasket.push(el);
                 }
             })

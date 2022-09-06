@@ -1,7 +1,7 @@
 Vue.component('products', {
-    props: ['products', 'img'],
+    props: ['products'],
     template: `<div class="position_box" >
-        <product v-for= "item of products" :img = "img" :product = "item" >
+        <product v-for= "item of products" :product = "item" :img = "item.imgPath"  >
         </product>
         </div > `
 });
