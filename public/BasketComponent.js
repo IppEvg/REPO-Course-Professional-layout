@@ -1,5 +1,5 @@
 Vue.component('basket', {
-    props: [ 'products'],
+    props: ['products'],
     template: `
     <div class="basket_menu" v-if='$root.show'>
         <div class ='mega_item'>

@@ -7,7 +7,7 @@ const app = new Vue({
         cartUrl: 'db/userCart.json',
         goods: [],
         filtered: [],
-        imgCatalog:'',
+        imgCatalog: '',
         userSearch: '',
         show: false,
         goodsOfBasket: [],
@@ -26,7 +26,7 @@ const app = new Vue({
                     this.error = true;
                 })
         },
-        putJson(url,data) {
+        putJson(url, data) {
             return fetch(url, {
                 method: "PUT",
                 headers: {
@@ -36,7 +36,6 @@ const app = new Vue({
             })
                 .then(result => result.json())
                 .catch(error => {
-                    console.log('');
                     this.error = true;
                 })
         },
@@ -54,42 +53,61 @@ const app = new Vue({
                     this.error = true;
                 })
         },
+        delJson(url, data) {
+            return fetch(url, {
+                method: "DELETE",
+                headers: {
+                    "content-Type": "application/json"
+                },
+                body: JSON.stringify(data)
+            })
+                .then(result => result.json())
+                .catch(error => {
+                    this.error = true;
+                })
+        },
 
         addProduct(item) {
-            let find = this.goodsOfBasket.find(el => item.id_product === el.id_product);
+            let find = this.goodsOfBasket.find(el => el.id_product === item.id_product);
             if (find) {
-                this.putJson(`/api/cart/${find.id_product}`, { quantity: 1 })
+                this.putJson(`/api/cart/${find.id_product}/${find.product_name}`, { quantity: 1 })
                     .then(data => {
-                        if (data.result === 1) {
+                        if (data.result) {
                             find.quantity++;
-                        } 
+                        }
                     })
             } else {
                 const prod = Object.assign({ quantity: 1 }, item);
                 item.imgPath = `Pictures/${item.id_product}.jpg`;
-                this.postJson('/api/cart', prod)
+                this.postJson(`/api/cart`, prod)
                     .then(data => {
-                        if (data.result === 1) {
+                        if (data.result) {
                             this.goodsOfBasket.push(prod);
                         }
                     })
             }
         },
-        delProduct(product) {
-            this.getJson(`${API}deleteFromBasket.json`)
-                .then(data => {
-                    if (data.result === 1) {
-                        if (product.quantity > 1) {
-                            product.quantity--;
-                        } else {
-                            this.goodsOfBasket.splice(this.goodsOfBasket.indexOf(product), 1);
+        delProduct(item) {
+            if (item.quantity > 1) {
+                this.putJson(`/api/cart/${item.id_product}/${item.product_name}`, { quantity: -1 })
+                    .then(data => {
+                        if (data.result) {
+                            item.quantity--;
                         }
-                    }
-                })
+                    })
+            } else {
+                this.delJson(`/api/cart/${item.id_product}`, item)
+                    .then(data => {
+                        if (data.result) {
+                            this.goodsOfBasket.splice(this.goodsOfBasket.indexOf(item), 1)
+                        } else {
+                            console.log('error');
+                        }
+                    })
+            }
         }
-
-
     },
+
 
     computed: {
         getSumm(product) {
@@ -105,7 +123,7 @@ const app = new Vue({
         this.getJson(`/api/products`)
             .then(data => {
                 for (let el of data) {
-                    el.imgPath=`Pictures/${el.id_product}.jpg` ;
+                    el.imgPath = `Pictures/${el.id_product}.jpg`;
                     this.goods.push(el);
                     this.filtered.push(el);
                 }

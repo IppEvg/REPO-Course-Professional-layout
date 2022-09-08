@@ -18,7 +18,7 @@ Vue.component('product', {
             </div>
         </a>
         <div class="add_button">
-                <button onclick="return false" class="add_button__link" @click="$parent.$emit('add-product',product)">
+                <button  class="add_button__link" @click="$parent.$emit('add-product',product)">
                     <img class="picture_button_add" src="Pictures/Basket_button_buy.svg"
                     alt="Basket_picture">
                     <p class="add_text">В корзину</p>

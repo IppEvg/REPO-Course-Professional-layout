@@ -64,17 +64,24 @@ body {
 .search_form {
     max-width: 180px;
     height: 28px;
-    display: none;
     position: absolute;
     left: 33px;
+    opacity: 0.1;
+    transition: opacity 1s;
+ 
+    
 }
 .search:hover .search_form {
-    display: block;
+    opacity: 0.8;
 }
+
 .search-field {
-    background-color: #FBFBFB;
+    background-color: #fbfbfb4b;
     height: 22px;
+    border: none;
+    color: rgb(255, 255, 255);
 }
+
 
 .box_right {
     width: 160px;
