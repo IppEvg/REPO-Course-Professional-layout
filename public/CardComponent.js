@@ -26,3 +26,4 @@ Vue.component('product', {
         </div>
     </div>`
 });
+
